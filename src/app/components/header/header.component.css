@@ -4,11 +4,10 @@
     width: 450px;
 }
 .search-icon{
-    /* z-index: 10;
-    position: absolute;
-    right: 47%;
-    color: black;
-    top: 32%; */
-    display: inline-block;
+    display: inline;
     float: right;
+    position: relative;
+    top: 10px;
+    right: 27px;
+    color: black;
 }

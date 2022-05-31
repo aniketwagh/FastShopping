@@ -14,10 +14,23 @@
     margin: 0px 15px;
     text-align: center;
 }
+
+h6{
+    margin-top: 9px;
+    /* transition: 0.3s ease-in-out;
+    transform: scale(1.1); */
+}
+
 .items img{
-    width: 75px;
+    width: 150px;
     margin-top: 7px;
 }
+
+.items img:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+} 
+
 .items a:hover{
     color: blueviolet;
 }
@@ -26,4 +39,19 @@
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100ch;
+}
+
+.card{
+    padding: 20px;
+    margin: 0px;
+}
+.card img{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+}
+.card img:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
 }
