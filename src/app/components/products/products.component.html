@@ -29,15 +29,27 @@
 
 <div class="container">
     <div class="row">
-        <ng-container *ngFor="let item of productlist">
+        <ng-container *ngFor="let item of result">
         <div class="card col-md-3">
-            <img src="{{item.image}}">
+            <!-- <h5>{{item.productId}}</h5> -->
+            
+            <!-- <p><b>Category:</b>{{item.productCategories}}</p> -->
+            
+            <img src="{{item.productImage}}">
+            <p><strong>{{item.productName}}</strong></p>
+            <p><b>₹{{item.productPrice}}</b></p>
+            <p><b>Description:</b> {{item.productDescription}}</p>
+                
+
+
+            <!-- <img src="{{item.image}}">
             <h5 class="itemdata">{{item.title}}</h5>
             <p class="itemdata"><strong>₹</strong>{{item.price}}</p>
             <p class="itemdata">{{item.description}}</p>
-            <p class="itemdata">{{item.category}}</p>
-            <button class="btn btn-primary">Add to cart</button>
+            <p class="itemdata">{{item.category}}</p> -->
+            <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button>
         </div>
     </ng-container>
     </div>
 </div>
+
