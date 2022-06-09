@@ -9,6 +9,12 @@
             </div>
         </div>
         <div>
+            <!-- <select name="products" id="products">
+                <option value="allproducts" routerLink="/products">All Products</option>
+                <option value="electronics" routerLink="/electronics">Electronics</option>
+                <option value="fashion" routerLink="/products">Fashion</option>
+                <option value="jewelery" routerLink="/products">Jewelery</option>
+              </select> -->
             <button class="btn btn-primary" routerLink="cart" >
             <i style="font-size: 25px;" class="fas fa-cart-plus"></i>
             <div class="badge bg-danger">{{totalItem}}</div>
@@ -16,6 +22,34 @@
         <button class="btn btn-primary" routerLink="login">Login</button>
         <button class="btn btn-primary" routerLink="signup">Signup</button>
     </div>
+    </div>
+</div>
+<div class="cart-top container-fluid">
+    <div class="container d-flex">
+        <div class="items">
+            <a>
+                <!-- <img src="../../../assets/img/images (1).jpg"> -->
+                <h6 routerLink="/products" >All Products</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a>
+                <!-- <img src="../../../assets/img/download.jpg" routerLink="/electronics"> -->
+                <h6 routerLink="/electronics">Electronics</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a>
+                <!-- <img src="../../../assets/img/images.jpg"> -->
+                <h6>Fashion</h6>
+            </a> 
+        </div>
+        <div class="items">
+            <a>
+                <!-- <img src="../../../assets/img/imgj.jpeg"> -->
+                <h6>Jewelery</h6>
+            </a>
+        </div>
     </div>
 </div>
 </header>

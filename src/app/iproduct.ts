@@ -3,7 +3,7 @@ export interface IProduct {
 
     productName:String;
 
-    productCategories:number;
+    productCategories:string;
 
     productPrice:number;
 

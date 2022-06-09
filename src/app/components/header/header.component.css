@@ -11,3 +11,28 @@
     right: 27px;
     color: black;
 }
+
+.cart-top{
+    display: flex;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #f8f5b4;
+    background-clip: border-box;
+    position: relative;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: .25rem;
+}
+
+.items{
+    margin: 0px 10px;
+    text-align: center;
+}
+.items a:hover{
+    color: blueviolet;
+}
+h6{
+    margin-top: 9px;
+    /* transition: 0.3s ease-in-out;
+    transform: scale(1.1); */
+} 

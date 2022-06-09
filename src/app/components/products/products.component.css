@@ -1,4 +1,4 @@
-.cart-top{
+/* .cart-top{
     display: flex;
     min-width: 0;
     word-wrap: break-word;
@@ -8,20 +8,20 @@
     flex-direction: column;
     border: 1px solid black;
     border-radius: .25rem;
-}
+} */
 
-.items{
+/* .items{
     margin: 0px 10px;
     text-align: center;
-}
+} */
 
-h6{
+/* h6{
     margin-top: 9px;
     /* transition: 0.3s ease-in-out;
-    transform: scale(1.1); */
-}
+    transform: scale(1.1); 
+} */
 
-.items img{
+/* .items img{
     width: 150px;
     margin-top: 7px;
 }
@@ -33,7 +33,7 @@ h6{
 
 .items a:hover{
     color: blueviolet;
-}
+} */
 .itemdata{
     white-space: nowrap;
     overflow: hidden;

@@ -10,6 +10,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { BoldPipe } from './bold.pipe';
+import { ElectronicsComponent } from './components/electronics/electronics.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { SignupComponent } from './components/signup/signup.component';
     CartComponent,
     FooterComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    BoldPipe,
+    ElectronicsComponent
   ],
   imports: [
     BrowserModule,

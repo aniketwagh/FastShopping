@@ -9,19 +9,23 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  result: IProduct[] = [];
+  constructor(private api: ApiService, private cartService: CartService) { }
 
-  
- result:IProduct[]=[];
-  constructor(private api:ApiService, private cartService : CartService) { }
+  ngOnInit(): void {
+    this.api.getData().subscribe((data: IProduct[]) => {
+      console.log(data);
+      this.result = data;
+      // for cart use------------------------
 
-ngOnInit(): void {
-  this.api.getData().subscribe((data:IProduct[]) =>{
-    console.log(data);
-    this.result = data;
-});
-}
-addtocart(item:any){
-  this.cartService.addtoCart(item);
+      this.result.forEach((a: any) => {
+
+        Object.assign(a, { quantity: 1, total: a.Price })
+      });
+    });
   }
-}
+    addtocart(item: any){
+      this.cartService.addtoCart(item);
+    }
+  }
 
