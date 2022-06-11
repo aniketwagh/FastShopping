@@ -1,4 +1,5 @@
 export interface IProduct {
+    value: string;
     productId:number;
 
     productName:String;

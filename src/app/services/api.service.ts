@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Eproduct } from '../eproduct';
 import { IProduct } from '../iproduct';
 
 
@@ -10,6 +9,7 @@ import { IProduct } from '../iproduct';
 })
 export class ApiService {
 
+  url!: string;
   constructor(private http:HttpClient) { }
 
   
@@ -21,10 +21,12 @@ export class ApiService {
     
   }
 
-  getcategoriesdata():Observable<Eproduct[]>{
-    let url="http://localhost:3000/eProducts"
-
-    return this.http.get<Eproduct[]>(url);
-  }
+  getSingleProduct(productId : number): Observable<IProduct> {
+    return this.http.get<IProduct>(this.url + 'products/' + productId);
+    }
+  
+    getProductsFromCategory(title: String): Observable<IProduct[]> {
+      return this.http.get<IProduct[]>(this.url + 'products/category/' + title);
+    }  
 }
 

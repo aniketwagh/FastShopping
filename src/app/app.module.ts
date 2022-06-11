@@ -11,7 +11,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { BoldPipe } from './bold.pipe';
-import { ElectronicsComponent } from './components/electronics/electronics.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { ElectronicsComponent } from './components/electronics/electronics.compo
     LoginComponent,
     SignupComponent,
     BoldPipe,
-    ElectronicsComponent
+    FilterPipe
   ],
   imports: [
     BrowserModule,

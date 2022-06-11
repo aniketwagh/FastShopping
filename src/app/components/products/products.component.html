@@ -1,6 +1,31 @@
+<div class="cart-top container-fluid">
+    <div class="container d-flex">
+        <div class="items">
+            <a (click)="filter('')" >
+                <h6 routerLink="/products" >All Products</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a (click)="filter('Electronics')">
+                <h6>Electronics</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a (click)="filter('Fashion')">
+                <h6>Fashion</h6>
+            </a> 
+        </div>
+        <div class="items">
+            <a (click)="filter('Jewellery')">
+                <h6>Jewelery</h6>
+            </a>
+        </div>
+    </div>
+</div>
+
 <div class="container">
     <div class="row">
-        <ng-container *ngFor="let item of result">
+        <ng-container *ngFor="let item of filterproductCategories | filter:searchKey: 'title'">
         <div class="card col-md-3">
             <!-- <h5>{{item.productId}}</h5> -->
             <!-- <p><b>Category:</b>{{item.productCategories}}</p> -->
@@ -13,6 +38,9 @@
     </ng-container>
     </div>
 </div>
+
+
+
 
 <!--<div class="cart-top container-fluid">
     <div class="container d-flex">
