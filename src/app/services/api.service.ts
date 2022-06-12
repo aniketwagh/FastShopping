@@ -9,7 +9,6 @@ import { IProduct } from '../iproduct';
 })
 export class ApiService {
 
-  url!: string;
   constructor(private http:HttpClient) { }
 
   
@@ -21,12 +20,6 @@ export class ApiService {
     
   }
 
-  getSingleProduct(productId : number): Observable<IProduct> {
-    return this.http.get<IProduct>(this.url + 'products/' + productId);
-    }
   
-    getProductsFromCategory(title: String): Observable<IProduct[]> {
-      return this.http.get<IProduct[]>(this.url + 'products/category/' + title);
-    }  
 }
 
