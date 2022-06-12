@@ -6,7 +6,7 @@ export interface IProduct {
 
     productCategories:string;
 
-    productPrice:number;
+    productPrice:string;
 
     productImage:string;
 

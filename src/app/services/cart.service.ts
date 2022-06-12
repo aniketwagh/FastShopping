@@ -9,8 +9,8 @@ export class CartService {
 
   public cartItemList:IProduct[]=[]
   public productList=new BehaviorSubject<any>([]);
+  public checkoutlist=new BehaviorSubject<any>([]);
   public search = new BehaviorSubject<string>("");
-  
   constructor() { }
 
   getProducts(){
@@ -34,7 +34,9 @@ export class CartService {
     })
     return grandTotal;
   }
-  removeCartItem(product: IProduct){
+  removeCartItem(product: IProduct)
+  {
+   
       for(let i=0;i<this.cartItemList.length;i++){
       if(this.cartItemList[i].productId === product.productId){
       this.cartItemList.splice(i,1);
@@ -45,5 +47,10 @@ export class CartService {
   removeAllCart(){
     this.cartItemList=[]
     this.productList.next(this.cartItemList);
+  }
+
+  addCheckoutList(data:any)
+  {
+    this.checkoutlist.next(data)
   }
 }
