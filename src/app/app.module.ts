@@ -12,6 +12,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { BoldPipe } from './bold.pipe';
 import { FilterPipe } from './filter.pipe';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FilterPipe } from './filter.pipe';
     LoginComponent,
     SignupComponent,
     BoldPipe,
-    FilterPipe
+    FilterPipe,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
